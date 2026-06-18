@@ -209,13 +209,17 @@ export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [tickX, setTickX] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const tickRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 120);
     const onScroll = () => setScrollY(window.scrollY);
+    const onResize = () => setIsMobile(window.innerWidth < 760);
+    onResize();
     window.addEventListener("scroll", onScroll);
-    return () => { window.removeEventListener("scroll", onScroll); };
+    window.addEventListener("resize", onResize);
+    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onResize); };
   }, []);
 
   useEffect(() => {
@@ -291,25 +295,27 @@ export default function Portfolio() {
         </svg>
       </div>
 
-      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:100, padding:"20px 52px", display:"flex", justifyContent:"space-between", alignItems:"center", background: scrollY>60 ? "rgba(250,245,240,0.90)" : "transparent", backdropFilter: scrollY>60 ? "blur(20px)" : "none", borderBottom: scrollY>60 ? "1px solid rgba(240,220,218,0.6)" : "none", transition:"all .4s ease" }}>
+      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:100, padding: isMobile ? "16px 20px" : "20px 52px", display:"flex", justifyContent:"space-between", alignItems:"center", background: scrollY>60 ? "rgba(250,245,240,0.90)" : "transparent", backdropFilter: scrollY>60 ? "blur(20px)" : "none", borderBottom: scrollY>60 ? "1px solid rgba(240,220,218,0.6)" : "none", transition:"all .4s ease" }}>
         <div style={{ fontWeight:700, fontSize:17, color:C.ink, letterSpacing:-0.5 }}>Shaina<span style={{ color:A }}>.</span></div>
-        <div style={{ display:"flex", gap:36 }}>
+        <div style={{ display:"flex", gap: isMobile ? 14 : 36 }}>
           <a href="#work" className="nav-a" style={{ textDecoration:"none" }}>Work</a>
           <a href="#stack" className="nav-a" style={{ textDecoration:"none" }}>Stack</a>
           <a href="#about" className="nav-a" style={{ textDecoration:"none" }}>About</a>
           <a href="#contact" className="nav-a" style={{ textDecoration:"none" }}>Contact</a>
         </div>
-        <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-          <div style={{ width:6, height:6, borderRadius:"50%", background:"#7AAA80", boxShadow:"0 0 8px #7AAA8080" }} />
-          <span style={{ fontFamily:"DM Mono, monospace", fontSize:9, color:C.mid, letterSpacing:1 }}>Open to roles · 2026</span>
-        </div>
+        {!isMobile && (
+          <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+            <div style={{ width:6, height:6, borderRadius:"50%", background:"#7AAA80", boxShadow:"0 0 8px #7AAA8080" }} />
+            <span style={{ fontFamily:"DM Mono, monospace", fontSize:9, color:C.mid, letterSpacing:1 }}>Open to roles · 2026</span>
+          </div>
+        )}
       </nav>
 
       <div style={{ position:"relative", zIndex:1 }}>
 
         {/* Hero */}
-        <section style={{ minHeight:"100vh", display:"flex", alignItems:"center", padding:"120px 52px 80px" }}>
-          <div style={{ maxWidth:1160, margin:"0 auto", width:"100%", display:"grid", gridTemplateColumns:"1fr 380px", gap:48, alignItems:"center" }}>
+        <section style={{ minHeight:"100vh", display:"flex", alignItems:"center", padding: isMobile ? "110px 22px 60px" : "120px 52px 80px" }}>
+          <div style={{ maxWidth:1160, margin:"0 auto", width:"100%", display:"grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 380px", gap: isMobile ? 36 : 48, alignItems:"center" }}>
             <div style={{ opacity: loaded ? 1 : 0, transition:"opacity .5s ease" }}>
               <div className="eyebrow r0" style={{ marginBottom:28 }}>Data pipelines &nbsp;·&nbsp; BI dashboards &nbsp;·&nbsp; AI tools</div>
               <h1 className="r1" style={{ fontWeight:800, fontSize:"clamp(50px, 6.5vw, 88px)", lineHeight:0.96, letterSpacing:"-2.5px", color:C.ink, marginBottom:28 }}>
@@ -357,7 +363,7 @@ export default function Portfolio() {
         </div>
 
         {/* Projects */}
-        <section id="work" style={{ padding:"88px 52px", maxWidth:1160, margin:"0 auto" }}>
+        <section id="work" style={{ padding: isMobile ? "60px 22px" : "88px 52px", maxWidth:1160, margin:"0 auto" }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginBottom:48 }}>
             <div>
               <div className="eyebrow" style={{ marginBottom:10 }}>Selected Work</div>
@@ -365,7 +371,7 @@ export default function Portfolio() {
             </div>
             <span style={{ fontFamily:"DM Mono, monospace", fontSize:9, color:C.muted, letterSpacing:1 }}>4 projects · hover to preview</span>
           </div>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(2, 1fr)", gap:16 }}>
+          <div style={{ display:"grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap:16 }}>
             {projects.map(p => {
               const DashComp = DASH[p.n];
               return (
@@ -414,13 +420,13 @@ export default function Portfolio() {
         </section>
 
         {/* Stack */}
-        <section id="stack" style={{ padding:"80px 52px" }}>
+        <section id="stack" style={{ padding: isMobile ? "60px 22px" : "80px 52px" }}>
           <div style={{ maxWidth:1160, margin:"0 auto" }}>
             <div style={{ marginBottom:48 }}>
               <div className="eyebrow" style={{ marginBottom:10 }}>Technical Skills</div>
               <h2 style={{ fontWeight:800, fontSize:"clamp(40px,5vw,64px)", letterSpacing:"-2px", color:C.ink, lineHeight:1 }}>Stack</h2>
             </div>
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(3, 1fr)", gap:14 }}>
+            <div style={{ display:"grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)", gap:14 }}>
               {[
                 { cat:"AI & Agents",        items:["Claude API","RAG Pipelines","OCR","Tool Use / Agents"],           color:"#5A3050" },
                 { cat:"Data Engineering",   items:["dbt Cloud","Snowflake","BigQuery","AWS S3","Azure"],               color:"#8A9FBE" },
@@ -444,8 +450,8 @@ export default function Portfolio() {
         </section>
 
         {/* About */}
-        <section id="about" style={{ padding:"80px 52px" }}>
-          <div style={{ maxWidth:1160, margin:"0 auto", display:"grid", gridTemplateColumns:"300px 1fr", gap:72, alignItems:"start" }}>
+        <section id="about" style={{ padding: isMobile ? "60px 22px" : "80px 52px" }}>
+          <div style={{ maxWidth:1160, margin:"0 auto", display:"grid", gridTemplateColumns: isMobile ? "1fr" : "300px 1fr", gap: isMobile ? 32 : 72, alignItems:"start" }}>
             <div>
               <div className="glass" style={{ borderRadius:18, overflow:"hidden", marginBottom:14 }}>
                 <img src={PHOTO} alt="Shaina Lolin" style={{ width:"100%", display:"block", objectFit:"cover", aspectRatio:"3/4", objectPosition:"center top" }} />
@@ -483,7 +489,7 @@ export default function Portfolio() {
         </section>
 
         {/* Contact */}
-        <section id="contact" style={{ padding:"100px 52px", textAlign:"center" }}>
+        <section id="contact" style={{ padding: isMobile ? "70px 22px" : "100px 52px", textAlign:"center" }}>
           <div style={{ maxWidth:520, margin:"0 auto" }}>
             <div className="eyebrow" style={{ marginBottom:16 }}>Get in Touch</div>
             <h2 style={{ fontWeight:800, fontSize:"clamp(44px,6vw,76px)", letterSpacing:"-2.5px", color:C.ink, lineHeight:0.95, marginBottom:24 }}>
@@ -496,7 +502,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <div className="glass" style={{ padding:"18px 52px", borderTop:"1px solid rgba(240,220,218,0.5)", display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:8 }}>
+        <div className="glass" style={{ padding: isMobile ? "16px 22px" : "18px 52px", borderTop:"1px solid rgba(240,220,218,0.5)", display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:8 }}>
           <div style={{ fontWeight:700, fontSize:15, color:C.ink }}>Shaina<span style={{ color:A }}>.</span></div>
           <div style={{ fontFamily:"DM Mono, monospace", fontSize:8, color:C.muted, letterSpacing:2 }}>SHAINALOLIN.COM © 2026</div>
           <div style={{ fontFamily:"DM Mono, monospace", fontSize:8, color:C.muted, letterSpacing:2 }}>IRVINE, CA</div>
