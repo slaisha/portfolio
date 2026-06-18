@@ -172,7 +172,7 @@ const projects = [
   {
     n:"01", title:"AI Invoice Analysis",
     tags:["Claude API","OCR","Python","Power BI","Azure"],
-    desc:"Built an invoice analysis tool using the Claude API and OCR, surfaced through Power BI dashboards on Azure. Cut manual contract review time for finance teams across $400M+ in vendor spend.",
+    desc:"Built an invoice analysis tool using the Claude API and OCR, surfaced in Power BI dashboards and deployed via Azure DevOps pipelines. Reduced manual contract review time for finance teams across $400M+ in vendor spend.",
     impact:"$400M+", sub:"in vendor spend analyzed", year:"2025", badge:"AI",
     grad:"linear-gradient(135deg,#ECD0E4,#E0C0D8)", link:"https://github.com/slaisha",
   },
@@ -186,14 +186,14 @@ const projects = [
   {
     n:"03", title:"Digital Sales Intelligence",
     tags:["Power BI","BigQuery","Adobe Analytics","AWS S3"],
-    desc:"Executive dashboard suite tracking EV sales performance, digital marketing metrics, and dealer satisfaction for a national automotive brand — pulling from BigQuery, Adobe Analytics, and AWS S3.",
+    desc:"Executive dashboard suite tracking EV sales performance, digital marketing KPIs, and dealer satisfaction for a national automotive brand — pulling from BigQuery, Adobe Analytics, AWS S3, and Salesforce.",
     impact:"8 dashboards", sub:"deployed org-wide", year:"2024",
     grad:"linear-gradient(135deg,#D0D0E0,#C0C0D0)", link:"https://github.com/slaisha/power-bi-digital-sales",
   },
   {
     n:"04", title:"Retail Analytics Suite",
     tags:["Snowflake","Power BI","SQL","NetSuite"],
-    desc:"Analytics solution integrating Snowflake, NetSuite, and Zenoti into Power BI financial dashboards for a national retail chain — delivered on schedule, no post-launch data issues.",
+    desc:"Analytics solution integrating Snowflake, NetSuite, and Zenoti into Power BI financial dashboards for a national retail chain — delivered on schedule with no post-launch data issues.",
     impact:"Zero defects", sub:"post-launch", year:"2023",
     grad:"linear-gradient(135deg,#E0C4DC,#D4B8D0)", link:"https://github.com/slaisha/power-bi-finance-salon",
   },
@@ -326,7 +326,7 @@ export default function Portfolio() {
                 <span style={{ fontFamily:"DM Mono, monospace", fontSize:10, letterSpacing:1, color:C.mid, opacity: fading ? 0 : 1, transition:"opacity .28s ease" }}>{roles[roleIdx]} · Irvine, CA</span>
               </div>
               <p className="r3" style={{ fontWeight:300, fontSize:17, color:C.mid, lineHeight:1.8, maxWidth:440, marginBottom:40 }}>
-                9 years building data pipelines and dashboards across automotive, finance, retail, and music tech — now building AI tools too.
+                9 years delivering data products across automotive, finance, music tech, and retail.
               </p>
               <div className="r4" style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
                 <a href="#work" style={{ textDecoration:"none" }}><button className="btn-fill">View Work</button></a>
@@ -468,7 +468,7 @@ export default function Portfolio() {
                 I'm a Sr. BI Analyst with 9 years building data pipelines, dashboards, and reporting systems across automotive, finance, music tech, and retail. My work has supported a $100M private equity decision and reporting across $400M+ in vendor spend.
               </p>
               <p style={{ fontWeight:300, fontSize:16, color:C.mid, lineHeight:1.85, marginBottom:36 }}>
-                I'm now focused on AI and data engineering — building tools with the Claude API, dbt, and Python. Most of it happens after the kids go to sleep.
+                I'm focused on AI and data engineering — building tools with the Claude API, dbt, and Python. Most of it happens after the kids go to sleep. That's when the good work gets done.
               </p>
               <div className="eyebrow" style={{ marginBottom:16 }}>Certifications</div>
               <div className="glass" style={{ borderRadius:12, overflow:"hidden", marginBottom:24 }}>
@@ -493,12 +493,18 @@ export default function Portfolio() {
           <div style={{ maxWidth:520, margin:"0 auto" }}>
             <div className="eyebrow" style={{ marginBottom:16 }}>Get in Touch</div>
             <h2 style={{ fontWeight:800, fontSize:"clamp(44px,6vw,76px)", letterSpacing:"-2.5px", color:C.ink, lineHeight:0.95, marginBottom:24 }}>
-              {"Let's work"}<br /><span style={{ color:A }}>together.</span>
+              Open to the<br /><span style={{ color:A }}>right role.</span>
             </h2>
-            <p style={{ fontWeight:300, fontSize:15, color:C.mid, lineHeight:1.8, marginBottom:40 }}>
-              Open to Analytics Engineer and AI Engineer roles in 2026.
+            <p style={{ fontFamily:"DM Mono, monospace", fontSize:10, color:C.mid, letterSpacing:1, marginBottom:16 }}>
+              Analytics Engineer · AI/GenAI Engineer · Irvine CA / Remote
             </p>
-            <a href="mailto:shainalolin@gmail.com"><button className="btn-fill" style={{ fontSize:11 }}>shainalolin@gmail.com</button></a>
+            <p style={{ fontWeight:300, fontSize:15, color:C.mid, lineHeight:1.8, marginBottom:40 }}>
+              9 years of experience. Now building with AI. Available now.
+            </p>
+            <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
+              <a href="mailto:shainalolin@gmail.com"><button className="btn-fill" style={{ fontSize:11 }}>Send an Email.</button></a>
+              <a href="https://linkedin.com/in/shainalolin" target="_blank" rel="noopener noreferrer"><button className="btn-out" style={{ fontSize:11 }}>LinkedIn ↗</button></a>
+            </div>
           </div>
         </section>
 
