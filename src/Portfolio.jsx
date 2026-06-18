@@ -5,7 +5,7 @@ const PHOTO = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBA
 
 const C = {
   bg:"#FAF5F0", ink:"#2A1A1C", mid:"#9A8080", muted:"#C4ADAD",
-  accent:"#B8686E", accentSoft:"#E8B8BC", accentLight:"#F0D4D6",
+  accent:"#5A3050", accentSoft:"#D8B4CC", accentLight:"#ECD4E4",
 };
 
 function DashAI() {
@@ -14,10 +14,10 @@ function DashAI() {
       <rect width="400" height="220" fill="#1a1012" rx="8"/>
       <rect width="400" height="32" fill="#241518" rx="8"/>
       <rect width="400" height="24" y="8" fill="#241518"/>
-      <text x="14" y="21" fill="#E8C4C8" fontSize="10" fontFamily="sans-serif" fontWeight="600">AI Invoice Analysis Dashboard</text>
+      <text x="14" y="21" fill="#D8BCD0" fontSize="10" fontFamily="sans-serif" fontWeight="600">AI Invoice Analysis Dashboard</text>
       <circle cx="332" cy="17" r="3" fill="#7AAA80"/>
       <text x="340" y="21" fill="#7AAA80" fontSize="8" fontFamily="sans-serif">LIVE</text>
-      {[["$400M+","Vendor Spend","#B8686E"],["2,847","Invoices","#C4713A"],["94.2%","Accuracy","#7AAA80"],["–67%","Review Time","#8A8FBE"]].map(([v,l,c],i) => (
+      {[["$400M+","Vendor Spend","#5A3050"],["2,847","Invoices","#C4713A"],["94.2%","Accuracy","#7AAA80"],["–67%","Review Time","#8A8FBE"]].map(([v,l,c],i) => (
         <g key={i} transform={`translate(${8+i*97},40)`}>
           <rect width="90" height="44" fill="#2e1820" rx="6"/>
           <rect width="90" height="3" fill={c} rx="1"/>
@@ -28,7 +28,7 @@ function DashAI() {
       <g transform="translate(8,92)">
         <rect width="240" height="118" fill="#241518" rx="6"/>
         <text x="10" y="16" fill="#806868" fontSize="7" fontFamily="sans-serif">INVOICE VOLUME BY MONTH</text>
-        <polyline points="20,85 38,78 56,70 74,65 92,58 110,52 128,48 146,42 164,38 182,34 200,30 218,26" fill="none" stroke="#B8686E" strokeWidth="2"/>
+        <polyline points="20,85 38,78 56,70 74,65 92,58 110,52 128,48 146,42 164,38 182,34 200,30 218,26" fill="none" stroke="#5A3050" strokeWidth="2"/>
         {["J","F","M","A","M","J","J","A","S","O","N","D"].map((m,i) => (
           <text key={i} x={20+i*18} y="115" fill="#604848" fontSize="6" fontFamily="sans-serif" textAnchor="middle">{m}</text>
         ))}
@@ -37,7 +37,7 @@ function DashAI() {
         <rect width="136" height="118" fill="#241518" rx="6"/>
         <text x="10" y="16" fill="#806868" fontSize="7" fontFamily="sans-serif">CONTRACT TYPES</text>
         <circle cx="68" cy="65" r="32" fill="none" stroke="#2e1820" strokeWidth="14"/>
-        <circle cx="68" cy="65" r="32" fill="none" stroke="#B8686E" strokeWidth="14" strokeDasharray="90 111" strokeDashoffset="0"/>
+        <circle cx="68" cy="65" r="32" fill="none" stroke="#5A3050" strokeWidth="14" strokeDasharray="90 111" strokeDashoffset="0"/>
         <circle cx="68" cy="65" r="32" fill="none" stroke="#C4713A" strokeWidth="14" strokeDasharray="50 151" strokeDashoffset="-90"/>
         <circle cx="68" cy="65" r="32" fill="none" stroke="#8A8FBE" strokeWidth="14" strokeDasharray="30 171" strokeDashoffset="-140"/>
         <text x="68" y="62" fill="#F0E0E4" fontSize="11" fontFamily="sans-serif" fontWeight="700" textAnchor="middle">2,847</text>
@@ -96,7 +96,7 @@ function DashSales() {
       <rect width="400" height="32" fill="#142018" rx="8"/>
       <rect width="400" height="24" y="8" fill="#142018"/>
       <text x="14" y="21" fill="#B0D4B8" fontSize="10" fontFamily="sans-serif" fontWeight="600">Digital Sales Intelligence · EV Performance</text>
-      {[["84.2K","Web Visits","#7AAA80"],["12.4K","Leads","#8A9FBE"],["3,241","Vehicle Sales","#B8686E"],["91%","Dealer Sat.","#C4713A"]].map(([v,l,c],i) => (
+      {[["84.2K","Web Visits","#7AAA80"],["12.4K","Leads","#8A9FBE"],["3,241","Vehicle Sales","#5A3050"],["91%","Dealer Sat.","#C4713A"]].map(([v,l,c],i) => (
         <g key={i} transform={`translate(${8+i*97},40)`}>
           <rect width="90" height="44" fill="#1a2e1a" rx="6"/>
           <rect width="90" height="3" fill={c} rx="1"/>
@@ -116,7 +116,7 @@ function DashSales() {
       <g transform="translate(256,92)">
         <rect width="136" height="118" fill="#142018" rx="6"/>
         <text x="10" y="16" fill="#6A8070" fontSize="7" fontFamily="sans-serif">SALES BY VEHICLE TYPE</text>
-        {[["EV","#7AAA80",78],["Hybrid","#8A9FBE",55],["ICE","#B8A0BE",42],["Powersports","#C4713A",30],["Marine","#B8686E",18]].map(([l,c,w],i) => (
+        {[["EV","#7AAA80",78],["Hybrid","#8A9FBE",55],["ICE","#B8A0BE",42],["Powersports","#C4713A",30],["Marine","#5A3050",18]].map(([l,c,w],i) => (
           <g key={i} transform={`translate(10,${26+i*17})`}>
             <text x="0" y="9" fill="#B0D4B8" fontSize="7" fontFamily="sans-serif">{l}</text>
             <rect x="46" y="3" width="70" height="6" fill="#1a2e1a" rx="2"/>
@@ -146,7 +146,7 @@ function DashRetail() {
       <g transform="translate(8,92)">
         <rect width="240" height="118" fill="#2a1520" rx="6"/>
         <text x="10" y="16" fill="#806070" fontSize="7" fontFamily="sans-serif">REVENUE BY CATEGORY</text>
-        {[["Hair","#B8686E",88],["Color","#E8C4C8",72],["Treatment","#B8A0BE",60],["Product","#7AAA80",45],["Other","#8A9FBE",30]].map(([l,c,w],i) => (
+        {[["Hair","#5A3050",88],["Color","#D8BCD0",72],["Treatment","#B8A0BE",60],["Product","#7AAA80",45],["Other","#8A9FBE",30]].map(([l,c,w],i) => (
           <g key={i} transform={`translate(10,${22+i*17})`}>
             <text x="0" y="10" fill="#E8C4D0" fontSize="7" fontFamily="sans-serif">{l}</text>
             <rect x="50" y="3" width="160" height="8" fill="#1e1018" rx="2"/>
@@ -159,7 +159,7 @@ function DashRetail() {
         <rect width="136" height="118" fill="#2a1520" rx="6"/>
         <text x="10" y="16" fill="#806070" fontSize="7" fontFamily="sans-serif">MONTHLY P&amp;L TREND</text>
         {[55,62,70,65,80,75,88,82,90,85,95,100].map((h,i) => (
-          <rect key={i} x={10+i*10} y={105-h*0.72} width="7" height={h*0.72} fill={i>=9?"#B8686E":"#3a2030"} rx="1"/>
+          <rect key={i} x={10+i*10} y={105-h*0.72} width="7" height={h*0.72} fill={i>=9?"#5A3050":"#3a2030"} rx="1"/>
         ))}
       </g>
     </svg>
@@ -174,28 +174,28 @@ const projects = [
     tags:["Claude API","OCR","Python","Power BI","Azure"],
     desc:"Built an invoice analysis tool using the Claude API and OCR, surfaced through Power BI dashboards on Azure. Cut manual contract review time for finance teams across $400M+ in vendor spend.",
     impact:"$400M+", sub:"in vendor spend analyzed", year:"2025", badge:"AI",
-    grad:"linear-gradient(135deg,#F0D0D4,#E4C0C8)", link:"https://github.com/slaisha",
+    grad:"linear-gradient(135deg,#ECD0E4,#E0C0D8)", link:"https://github.com/slaisha",
   },
   {
     n:"02", title:"dbt Financial Pipeline",
     tags:["dbt Cloud","BigQuery","Power BI","SQL"],
     desc:"Built financial data pipelines using dbt and BigQuery, delivering a Power BI reporting suite for a music technology company. The analytics supported a $100M private equity investment decision.",
     impact:"$100M", sub:"investment decision supported", year:"2023",
-    grad:"linear-gradient(135deg,#C8D4E8,#B8C8DC)", link:"https://github.com/slaisha/power-bi-finance-salon",
+    grad:"linear-gradient(135deg,#D4CCE4,#C4BCD4)", link:"https://github.com/slaisha/power-bi-finance-salon",
   },
   {
     n:"03", title:"Digital Sales Intelligence",
     tags:["Power BI","BigQuery","Adobe Analytics","AWS S3"],
     desc:"Executive dashboard suite tracking EV sales performance, digital marketing metrics, and dealer satisfaction for a national automotive brand — pulling from BigQuery, Adobe Analytics, and AWS S3.",
     impact:"8 dashboards", sub:"deployed org-wide", year:"2024",
-    grad:"linear-gradient(135deg,#C8E0D0,#B8D4C4)", link:"https://github.com/slaisha/power-bi-digital-sales",
+    grad:"linear-gradient(135deg,#D0D0E0,#C0C0D0)", link:"https://github.com/slaisha/power-bi-digital-sales",
   },
   {
     n:"04", title:"Retail Analytics Suite",
     tags:["Snowflake","Power BI","SQL","NetSuite"],
     desc:"Analytics solution integrating Snowflake, NetSuite, and Zenoti into Power BI financial dashboards for a national retail chain — delivered on schedule, no post-launch data issues.",
     impact:"Zero defects", sub:"post-launch", year:"2023",
-    grad:"linear-gradient(135deg,#E8C8D4,#DCC0CC)", link:"https://github.com/slaisha/power-bi-finance-salon",
+    grad:"linear-gradient(135deg,#E0C4DC,#D4B8D0)", link:"https://github.com/slaisha/power-bi-finance-salon",
   },
 ];
 
@@ -245,22 +245,22 @@ export default function Portfolio() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap');
         *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-        .glass { background:rgba(255,252,250,0.65); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,245,242,0.80); box-shadow:0 8px 40px rgba(180,100,100,0.08); }
+        .glass { background:rgba(255,252,250,0.65); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,245,242,0.80); box-shadow:0 8px 40px rgba(90,48,80,0.08); }
         .nav-a { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:#9A8080; transition:color .2s; }
         .nav-a:hover { color:#2A1A1C; }
-        .eyebrow { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#B8686E; }
-        .proj-card { background:rgba(255,252,250,0.65); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,245,242,0.80); box-shadow:0 8px 40px rgba(180,100,100,0.08); transition:all .3s ease; }
-        .proj-card:hover { transform:translateY(-4px); box-shadow:0 16px 48px rgba(180,100,100,0.14); border-color:rgba(220,180,180,0.6); }
+        .eyebrow { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#5A3050; }
+        .proj-card { background:rgba(255,252,250,0.65); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,245,242,0.80); box-shadow:0 8px 40px rgba(90,48,80,0.08); transition:all .3s ease; }
+        .proj-card:hover { transform:translateY(-4px); box-shadow:0 16px 48px rgba(90,48,80,0.13); border-color:rgba(180,140,170,0.45); }
         .proj-card:hover .dash-preview { opacity:1 !important; max-height:220px !important; }
         .dash-preview { opacity:0; max-height:0; overflow:hidden; transition:all 0.4s ease; border-radius:8px; }
         .tag { font-family:'DM Mono',monospace; font-size:8px; padding:3px 10px; background:rgba(255,252,250,0.7); border:1px solid rgba(220,200,200,0.5); color:#9A8080; border-radius:20px; white-space:nowrap; transition:all .2s; }
-        .tag:hover { background:rgba(230,180,185,0.2); border-color:#E8B8BC; color:#B8686E; }
+        .tag:hover { background:rgba(200,160,190,0.18); border-color:#D8B4CC; color:#5A3050; }
         .btn-fill { font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; padding:13px 34px; background:#2A1A1C; color:#FAF5F0; border:none; transition:all .2s; border-radius:2px; }
-        .btn-fill:hover { background:#B8686E; transform:translateY(-1px); }
+        .btn-fill:hover { background:#5A3050; transform:translateY(-1px); }
         .btn-out { font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; padding:13px 34px; background:rgba(255,252,250,0.7); color:#2A1A1C; border:1px solid rgba(180,130,130,0.35); transition:all .2s; border-radius:2px; }
         .btn-out:hover { background:#2A1A1C; color:#FAF5F0; transform:translateY(-1px); }
         .proj-link { font-family:'DM Mono',monospace; font-size:8px; letter-spacing:1px; color:#C4ADAD; text-decoration:none; border-bottom:1px solid transparent; transition:all .2s; }
-        .proj-link:hover { color:#B8686E; border-color:#B8686E; }
+        .proj-link:hover { color:#5A3050; border-color:#5A3050; }
         @keyframes rise { from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:translateY(0);} }
         @keyframes float  { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(12px,-18px) scale(1.03);} 66%{transform:translate(-8px,10px) scale(0.97);} }
         @keyframes float2 { 0%,100%{transform:translate(0,0);} 33%{transform:translate(-14px,12px);} 66%{transform:translate(10px,-16px);} }
@@ -272,22 +272,22 @@ export default function Portfolio() {
         .r4{animation:rise .9s ease forwards;animation-delay:.60s;opacity:0;}
         ::-webkit-scrollbar{width:2px;}
         ::-webkit-scrollbar-track{background:#FAF5F0;}
-        ::-webkit-scrollbar-thumb{background:#E8C4C8;}
+        ::-webkit-scrollbar-thumb{background:#D8BCD0;}
       `}</style>
 
       <div style={{ position:"fixed", inset:0, zIndex:0, overflow:"hidden", pointerEvents:"none" }}>
-        <div style={{ position:"absolute", top:"-10%", left:"-8%", width:700, height:700, borderRadius:"50%", background:"radial-gradient(circle,#F0C8C0 0%,#F4D4CC 35%,transparent 70%)", filter:"blur(72px)", opacity:0.50, animation:"float 18s ease-in-out infinite" }} />
-        <div style={{ position:"absolute", top:"5%", right:"-12%", width:600, height:600, borderRadius:"50%", background:"radial-gradient(circle,#ECC0C8 0%,#F0C8D0 35%,transparent 70%)", filter:"blur(80px)", opacity:0.40, animation:"float2 22s ease-in-out infinite" }} />
-        <div style={{ position:"absolute", top:"35%", left:"5%", width:480, height:480, borderRadius:"50%", background:"radial-gradient(circle,#F4D8C8 0%,#F8E0D0 40%,transparent 70%)", filter:"blur(60px)", opacity:0.35, animation:"float3 15s ease-in-out infinite" }} />
-        <div style={{ position:"absolute", bottom:"5%", right:"8%", width:560, height:560, borderRadius:"50%", background:"radial-gradient(circle,#F0C4CC 0%,#ECC0C8 40%,transparent 70%)", filter:"blur(68px)", opacity:0.38, animation:"float 20s ease-in-out infinite reverse" }} />
+        <div style={{ position:"absolute", top:"-10%", left:"-8%", width:700, height:700, borderRadius:"50%", background:"radial-gradient(circle,#ECC8DC 0%,#F0D4E4 35%,transparent 70%)", filter:"blur(72px)", opacity:0.50, animation:"float 18s ease-in-out infinite" }} />
+        <div style={{ position:"absolute", top:"5%", right:"-12%", width:600, height:600, borderRadius:"50%", background:"radial-gradient(circle,#E4BCD8 0%,#E8C8DE 35%,transparent 70%)", filter:"blur(80px)", opacity:0.40, animation:"float2 22s ease-in-out infinite" }} />
+        <div style={{ position:"absolute", top:"35%", left:"5%", width:480, height:480, borderRadius:"50%", background:"radial-gradient(circle,#F0D4E0 0%,#F4DCE6 40%,transparent 70%)", filter:"blur(60px)", opacity:0.35, animation:"float3 15s ease-in-out infinite" }} />
+        <div style={{ position:"absolute", bottom:"5%", right:"8%", width:560, height:560, borderRadius:"50%", background:"radial-gradient(circle,#E8C0D8 0%,#E4BCD4 40%,transparent 70%)", filter:"blur(68px)", opacity:0.38, animation:"float 20s ease-in-out infinite reverse" }} />
         <svg style={{ position:"absolute", top:"8%", right:"4%", opacity:0.06, width:280, height:280 }} viewBox="0 0 280 280" fill="none">
-          <path d="M140 20 C180 60 220 100 200 160 C180 220 120 240 100 200 C80 160 100 80 140 20Z" stroke="#B8686E" strokeWidth="1" fill="none"/>
+          <path d="M140 20 C180 60 220 100 200 160 C180 220 120 240 100 200 C80 160 100 80 140 20Z" stroke="#5A3050" strokeWidth="1" fill="none"/>
           <path d="M140 20 C100 60 60 100 80 160 C100 220 160 240 180 200 C200 160 180 80 140 20Z" stroke="#C4818A" strokeWidth="0.8" fill="none"/>
-          <circle cx="140" cy="140" r="60" stroke="#B8686E" strokeWidth="0.6" fill="none" strokeDasharray="4 8"/>
+          <circle cx="140" cy="140" r="60" stroke="#5A3050" strokeWidth="0.6" fill="none" strokeDasharray="4 8"/>
         </svg>
         <svg style={{ position:"absolute", bottom:"12%", left:"3%", opacity:0.06, width:220, height:220, transform:"rotate(45deg)" }} viewBox="0 0 220 220" fill="none">
           <path d="M110 10 C150 50 180 90 160 140 C140 190 80 200 60 160 C40 120 60 50 110 10Z" stroke="#C4818A" strokeWidth="1" fill="none"/>
-          <path d="M110 10 C70 50 40 90 60 140 C80 190 140 200 160 160 C180 120 160 50 110 10Z" stroke="#B8686E" strokeWidth="0.8" fill="none"/>
+          <path d="M110 10 C70 50 40 90 60 140 C80 190 140 200 160 160 C180 120 160 50 110 10Z" stroke="#5A3050" strokeWidth="0.8" fill="none"/>
         </svg>
       </div>
 
@@ -331,7 +331,7 @@ export default function Portfolio() {
             <div className="glass r2" style={{ borderRadius:20, overflow:"hidden", opacity: loaded ? 1 : 0, transition:"opacity .9s ease .3s" }}>
               <div style={{ position:"relative", overflow:"hidden" }}>
                 <img src={PHOTO} alt="Shaina Lolin" style={{ width:"100%", display:"block", objectFit:"cover", aspectRatio:"1/1", objectPosition:"center top" }} />
-                <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg, transparent 65%, rgba(184,104,110,0.08) 100%)" }} />
+                <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg, transparent 65%, rgba(90,48,80,0.08) 100%)" }} />
               </div>
               <div style={{ padding:"20px 24px" }}>
                 {[["$400M+","in vendor spend analyzed"],["$100M","investment decision supported"],["9 yrs","experience"]].map(([n,l],i) => (
@@ -377,7 +377,7 @@ export default function Portfolio() {
                   <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:12 }}>
                     <span style={{ fontFamily:"DM Mono, monospace", fontSize:10, color:C.muted, letterSpacing:1 }}>{p.n}</span>
                     <div style={{ display:"flex", gap:8, alignItems:"center" }}>
-                      {p.badge && <span style={{ fontFamily:"DM Mono, monospace", fontSize:7, letterSpacing:2, padding:"3px 9px", background:"rgba(184,104,110,0.10)", color:A, border:"1px solid rgba(184,104,110,0.25)", borderRadius:12 }}>{p.badge}</span>}
+                      {p.badge && <span style={{ fontFamily:"DM Mono, monospace", fontSize:7, letterSpacing:2, padding:"3px 9px", background:"rgba(90,48,80,0.10)", color:A, border:"1px solid rgba(90,48,80,0.25)", borderRadius:12 }}>{p.badge}</span>}
                       <span style={{ fontFamily:"DM Mono, monospace", fontSize:9, color:C.muted }}>{p.year}</span>
                     </div>
                   </div>
@@ -403,7 +403,7 @@ export default function Portfolio() {
           </div>
           <div className="glass" style={{ marginTop:16, padding:"18px 24px", borderRadius:12, display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:12 }}>
             <div style={{ display:"flex", alignItems:"center", gap:12 }}>
-              <div style={{ width:7, height:7, borderRadius:"50%", background:A, boxShadow:"0 0 10px rgba(184,104,110,0.5)", flexShrink:0 }} />
+              <div style={{ width:7, height:7, borderRadius:"50%", background:A, boxShadow:"0 0 10px rgba(90,48,80,0.45)", flexShrink:0 }} />
               <div>
                 <div className="eyebrow" style={{ marginBottom:3 }}>Building now</div>
                 <div style={{ fontWeight:600, fontSize:15, color:C.ink }}>AI Data Analyst — ask questions about any dataset in plain English</div>
@@ -422,7 +422,7 @@ export default function Portfolio() {
             </div>
             <div style={{ display:"grid", gridTemplateColumns:"repeat(3, 1fr)", gap:14 }}>
               {[
-                { cat:"AI & Agents",        items:["Claude API","RAG Pipelines","OCR","Tool Use / Agents"],           color:"#B8686E" },
+                { cat:"AI & Agents",        items:["Claude API","RAG Pipelines","OCR","Tool Use / Agents"],           color:"#5A3050" },
                 { cat:"Data Engineering",   items:["dbt Cloud","Snowflake","BigQuery","AWS S3","Azure"],               color:"#8A9FBE" },
                 { cat:"Analytics & BI",     items:["Power BI","DAX","Power Query","Tableau","Adobe Analytics"],        color:"#7AAA80" },
                 { cat:"Languages",          items:["SQL","Python","JavaScript","R"],                                   color:"#B8A0BE" },
@@ -459,10 +459,10 @@ export default function Portfolio() {
               <div className="eyebrow" style={{ marginBottom:10 }}>About</div>
               <h2 style={{ fontWeight:800, fontSize:"clamp(40px,5vw,60px)", letterSpacing:"-2px", color:C.ink, lineHeight:1, marginBottom:32 }}>Background.</h2>
               <p style={{ fontWeight:300, fontSize:16, color:C.mid, lineHeight:1.85, marginBottom:18 }}>
-                I'm a Sr. BI Analyst with 9 years building data pipelines, dashboards, and reporting systems across automotive, finance, music tech, and retail. My work has supported a $100M private equity decision and helped teams make sense of $400M+ in vendor spend.
+                I'm a Sr. BI Analyst with 9 years building data pipelines, dashboards, and reporting systems across automotive, finance, music tech, and retail. My work has supported a $100M private equity decision and reporting across $400M+ in vendor spend.
               </p>
               <p style={{ fontWeight:300, fontSize:16, color:C.mid, lineHeight:1.85, marginBottom:36 }}>
-                I'm now focused on AI and data engineering — building tools with the Claude API, dbt, and Python. Most of it happens after the kids go to sleep, which is fine. That's when the good work gets done anyway.
+                I'm now focused on AI and data engineering — building tools with the Claude API, dbt, and Python. Most of it happens after the kids go to sleep.
               </p>
               <div className="eyebrow" style={{ marginBottom:16 }}>Certifications</div>
               <div className="glass" style={{ borderRadius:12, overflow:"hidden", marginBottom:24 }}>
@@ -473,9 +473,9 @@ export default function Portfolio() {
                   </div>
                 ))}
               </div>
-              <div className="glass" style={{ borderRadius:12, padding:"16px 20px", borderLeft:"3px solid #E8C4C8" }}>
+              <div className="glass" style={{ borderRadius:12, padding:"16px 20px", borderLeft:"3px solid #D8BCD0" }}>
                 <p style={{ fontWeight:300, fontSize:14, color:C.mid, lineHeight:1.8 }}>
-                  Outside of work: golf, sketching, and fantasy novels. M.S. in Information Systems and Business Analytics, CSUF. Based in Irvine, CA.
+                  M.S. in Information Systems and Business Analytics, CSUF. Based in Irvine, CA. Outside of work: golf, sketching, and fantasy novels.
                 </p>
               </div>
             </div>
