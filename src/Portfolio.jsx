@@ -378,7 +378,7 @@ export default function Portfolio() {
               <div className="eyebrow" style={{ marginBottom:10 }}>Selected Work</div>
               <h2 style={{ fontWeight:800, fontSize:"clamp(40px,5vw,64px)", letterSpacing:"-2px", color:C.ink, lineHeight:1 }}>Projects</h2>
             </div>
-            <span style={{ fontFamily:"DM Mono, monospace", fontSize:9, color:C.muted, letterSpacing:1 }}>4 projects · hover to preview</span>
+            <span style={{ fontFamily:"DM Mono, monospace", fontSize:9, color:C.muted, letterSpacing:1 }}>5 projects · hover to preview</span>
           </div>
           <div style={{ display:"grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap:16 }}>
             {projects.map(p => {
@@ -387,7 +387,11 @@ export default function Portfolio() {
                 <div key={p.n} className="proj-card" style={{ borderRadius:16, padding:28, overflow:"hidden", position:"relative" }} onClick={() => setActive(active===p.n ? null : p.n)}>
                   <div style={{ position:"absolute", top:0, left:0, right:0, height:3, background:p.grad, borderRadius:"16px 16px 0 0" }} />
                   <div className="dash-preview" style={{ marginBottom:14, borderRadius:8, overflow:"hidden", border:"1px solid rgba(200,170,170,0.2)" }}>
-                    <DashComp />
+                    {DashComp ? <DashComp /> : (
+                      <div style={{ aspectRatio:"16/9", display:"flex", alignItems:"center", justifyContent:"center", background:p.grad, color:"#fff", fontFamily:"DM Mono, monospace", fontSize:11, letterSpacing:2, textTransform:"uppercase" }}>
+                        {p.title}
+                      </div>
+                    )}
                   </div>
                   <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:12 }}>
                     <span style={{ fontFamily:"DM Mono, monospace", fontSize:10, color:C.muted, letterSpacing:1 }}>{p.n}</span>
