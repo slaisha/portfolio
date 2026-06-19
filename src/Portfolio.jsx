@@ -170,28 +170,37 @@ const DASH = { "01": DashAI, "02": DashDBT, "03": DashSales, "04": DashRetail };
 
 const projects = [
   {
-    n:"01", title:"AI Invoice Analysis",
+    n:"01", title:"AI Data Analyst",
+    tags:["Python","Streamlit","pandas","Ollama","LLM"],
+    desc:"A local-first analytics tool that turns any CSV/Excel file into an executive summary, interactive charts, and plain-English answers. Uses a local Ollama LLM when available and falls back to deterministic pandas analysis — so your data never leaves your machine and the app never breaks in a demo.",
+    impact:"Live demo", sub:"open source · deployed", year:"2026", badge:"AI",
+    grad:"linear-gradient(135deg,#ECD0E4,#E0C0D8)",
+    link:"https://github.com/slaisha/ai-data-analyst",
+    live:"https://slaisha-ai-data-analyst-app-fqsp4g.streamlit.app/",
+  },
+  {
+    n:"02", title:"AI Invoice Analysis",
     tags:["Claude API","OCR","Python","Power BI","Azure"],
     desc:"Built an invoice analysis tool using the Claude API and OCR, surfaced in Power BI dashboards and deployed via Azure DevOps pipelines. Reduced manual contract review time for finance teams across $400M+ in vendor spend.",
     impact:"$400M+", sub:"in vendor spend analyzed", year:"2025", badge:"AI",
     grad:"linear-gradient(135deg,#ECD0E4,#E0C0D8)", link:"https://github.com/slaisha",
   },
   {
-    n:"02", title:"dbt Financial Pipeline",
+    n:"03", title:"dbt Financial Pipeline",
     tags:["dbt Cloud","BigQuery","Power BI","SQL"],
     desc:"Built financial data pipelines using dbt and BigQuery, delivering a Power BI reporting suite for a music technology company. The analytics supported a $100M private equity investment decision.",
     impact:"$100M", sub:"investment decision supported", year:"2023",
     grad:"linear-gradient(135deg,#D4CCE4,#C4BCD4)", link:"https://github.com/slaisha/power-bi-finance-salon",
   },
   {
-    n:"03", title:"Digital Sales Intelligence",
+    n:"04", title:"Digital Sales Intelligence",
     tags:["Power BI","BigQuery","Adobe Analytics","AWS S3"],
     desc:"Executive dashboard suite tracking EV sales performance, digital marketing KPIs, and dealer satisfaction for a national automotive brand — pulling from BigQuery, Adobe Analytics, AWS S3, and Salesforce.",
     impact:"8 dashboards", sub:"deployed org-wide", year:"2024",
     grad:"linear-gradient(135deg,#D0D0E0,#C0C0D0)", link:"https://github.com/slaisha/power-bi-digital-sales",
   },
   {
-    n:"04", title:"Retail Analytics Suite",
+    n:"05", title:"Retail Analytics Suite",
     tags:["Snowflake","Power BI","SQL","NetSuite"],
     desc:"Analytics solution integrating Snowflake, NetSuite, and Zenoti into Power BI financial dashboards for a national retail chain — delivered on schedule with no post-launch data issues.",
     impact:"Zero defects", sub:"post-launch", year:"2023",
@@ -401,6 +410,9 @@ export default function Portfolio() {
                     <div style={{ marginTop:16, paddingTop:16, borderTop:"1px solid rgba(200,170,170,0.18)" }}>
                       <p style={{ fontWeight:300, fontSize:14, color:C.mid, lineHeight:1.8, marginBottom:12 }}>{p.desc}</p>
                       <a href={p.link} target="_blank" rel="noopener noreferrer" className="proj-link">View on GitHub →</a>
+                      {p.live && (
+                        <a href={p.live} target="_blank" rel="noopener noreferrer" className="proj-link" style={{ marginLeft:18 }}>Live Demo →</a>
+                      )}
                     </div>
                   )}
                 </div>

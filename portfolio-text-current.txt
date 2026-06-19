@@ -1,0 +1,151 @@
+PORTFOLIO TEXT — CURRENT VERSION
+===================================
+
+── NAVIGATION ──
+Work | Stack | About | Contact
+Open to roles · 2026
+
+
+── HERO ──
+
+Eyebrow:
+Data pipelines · BI dashboards · AI tools
+
+H1:
+Shaina
+Lolin.
+
+Rotating roles:
+Sr. BI Analyst IV
+Analytics Engineer
+AI/GenAI Engineer
+
+Location:
+Irvine, CA
+
+Bio:
+9 years delivering data products across automotive, finance, music tech, and retail.
+
+CTAs:
+View Work
+Download Resume
+
+Photo card stats:
+$400M+ · in vendor spend analyzed
+$100M · investment decision supported
+9 yrs · experience
+
+
+── TECH TICKER ──
+dbt Cloud ✦ Snowflake ✦ BigQuery ✦ Power BI ✦ Claude API ✦ Python ✦ SQL ✦ Azure ✦ AWS ✦ PostgreSQL ✦ DAX ✦ Tableau ✦ Adobe Analytics
+
+
+── PROJECTS ──
+
+Header:
+Selected Work
+Projects
+4 projects · hover to preview
+
+---
+
+01 · AI Invoice Analysis [AI] 2025
+Tags: Claude API · OCR · Python · Power BI · Azure
+
+Built an invoice analysis tool using the Claude API and OCR, surfaced in Power BI dashboards and deployed via Azure DevOps pipelines. Reduced manual contract review time for finance teams across $400M+ in vendor spend.
+
+Impact: $400M+ · in vendor spend analyzed
+View on GitHub →
+
+---
+
+02 · dbt Financial Pipeline 2023
+Tags: dbt Cloud · BigQuery · Power BI · SQL
+
+Built financial data pipelines using dbt and BigQuery, delivering a Power BI reporting suite for a music technology company. The analytics supported a $100M private equity investment decision.
+
+Impact: $100M · investment decision supported
+View on GitHub →
+
+---
+
+03 · Digital Sales Intelligence 2024
+Tags: Power BI · BigQuery · Adobe Analytics · AWS S3
+
+Executive dashboard suite tracking EV sales performance, digital marketing KPIs, and dealer satisfaction for a national automotive brand — pulling from BigQuery, Adobe Analytics, AWS S3, and Salesforce.
+
+Impact: 8 dashboards · deployed org-wide
+View on GitHub →
+
+---
+
+04 · Retail Analytics Suite 2023
+Tags: Snowflake · Power BI · SQL · NetSuite
+
+Analytics solution integrating Snowflake, NetSuite, and Zenoti into Power BI financial dashboards for a national retail chain — delivered on schedule with no post-launch data issues.
+
+Impact: Zero defects · post-launch
+View on GitHub →
+
+---
+
+Building now [pulsing dot]
+AI Data Analyst — ask questions about any dataset in plain English
+Python · Claude API
+
+
+── STACK ──
+
+Technical Skills
+Stack
+
+AI & Agents: Claude API · RAG Pipelines · OCR · Tool Use / Agents
+Data Engineering: dbt Cloud · Snowflake · BigQuery · AWS S3 · Azure
+Analytics & BI: Power BI · DAX · Power Query · Tableau · Adobe Analytics
+Languages: SQL · Python · JavaScript · R
+Databases: PostgreSQL · Oracle SQL · SQL Server
+Business Systems: NetSuite · Salesforce · Zenoti · GitHub
+
+
+── ABOUT ──
+
+About
+Background.
+
+I'm a Sr. BI Analyst with 9 years building data pipelines, dashboards, and reporting systems across automotive, finance, music tech, and retail. My work has supported a $100M private equity decision and reporting across $400M+ in vendor spend.
+
+I'm focused on AI and data engineering — building tools with the Claude API, dbt, and Python. Most of it happens after the kids go to sleep. That's when the good work gets done.
+
+Certifications:
+Power BI Data Analyst · Microsoft PL-300
+Python for Data Science · IBM
+Data Analysis with Excel · Microsoft
+
+M.S. in Information Systems and Business Analytics, CSUF. Based in Irvine, CA. Outside of work: golf, sketching, and fantasy novels.
+
+CTAs:
+LinkedIn
+GitHub
+
+
+── CONTACT ──
+
+Get in Touch
+
+Open to the
+right role.
+
+Analytics Engineer · AI/GenAI Engineer · Irvine CA / Remote
+
+9 years of experience. Now building with AI. Available now.
+
+CTAs:
+Send an Email
+LinkedIn ↗
+
+
+── FOOTER ──
+
+Shaina.
+SHAINALOLIN.COM © 2026
+IRVINE, CA
